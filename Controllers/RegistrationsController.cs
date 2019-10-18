@@ -7,7 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using assessment2.Models;
 using Microsoft.AspNetCore.Http;
-
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
 namespace assessment2.Controllers
 {
     public class RegistrationsController : Controller
@@ -71,7 +72,6 @@ namespace assessment2.Controllers
 
             if (U.Role =="Admin" )
             {
-                
 
                 return RedirectToAction(nameof(AdminDashboard));
             }
